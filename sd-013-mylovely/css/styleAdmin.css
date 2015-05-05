@@ -1,0 +1,11 @@
+/*
+   CSS for Simple-Xoops V 0.8
+        theme name:        sd-013-mylovelytheme
+   Standart Admin Styles
+        Version 0.1
+*/
+
+@import url(core.css);
+@import url(column.css);
+@import url(menu.css);
+@import url(admin.css);

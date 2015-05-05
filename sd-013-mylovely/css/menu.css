@@ -1,0 +1,145 @@
+/*
+   CSS for Simple-Xoops V 0.8
+        theme name:        sd-013-mylovelytheme
+        Version 0.1
+
+        Navigation bar and menus
+*/
+
+td#mainmenu a, td#usermenu a {
+         color: #676767;
+         background-color: transparent;
+         margin: 0;
+         padding: 2px;
+         border: 0px solid transparent;
+         text-decoration: none;
+         display: block;
+}
+td#mainmenu a:hover, td#usermenu a:hover {
+         color: #272727;
+         background-color: transparent;
+         border: 0px solid transparent;
+         text-decoration: none;
+}
+td#mainmenu a.menuTop, td#usermenu a.menuTop {padding-left: 3px; }
+td#mainmenu a.menuMain {padding-left: 3px; }
+td#mainmenu a.menuMainActive {padding-left: 3px; font-style: italic; }
+td#mainmenu a.menuSub {
+         background-color: transparent;
+         color: #000;
+         border: 0px;
+         padding-left: 9px;
+}
+td#mainmenu a.menuSub:hover {
+         background-color: transparent;
+         color: #990033;
+}
+td#mainmenu a.menuSubActive {
+         background-color: transparent;
+         color: #990033;
+         border: 0px;
+         padding-left: 9px;
+}
+td#mainmenu a.menuMainKat {
+         background: url('../images/titlebg.png') repeat-x #660033;
+         padding-left: 25px;
+         color: #FFFFFF;
+         font-weight: bold;
+         font-style: italic;
+}
+
+td#usermenu a.highlight {background-color: #fcc; }
+
+
+#navbar {
+         background: url('../images/menu_bg.png') no-repeat top left transparent;
+         height: 30px;
+         border-bottom: 0px solid /*#ffcccc*/;
+         padding-top: 7px;
+         padding-bottom: 5px;
+         padding-left: 15px;
+         cursor: default;
+}
+
+.NavMenu {
+         font-family: Verdana,Tahoma,Georgia,sans-serif;
+         font-size: 11px;
+         /*-moz-user-select: none;*/
+}
+
+.NavMenu .button,
+.NavMenu .button:hover,
+.NavMenu .button-active,
+.NavMenu .button-active:hover {
+         line-height: normal;
+         padding: 3px 6px 3px 6px;
+         border: 1px solid #cc3366;
+         color: #272727;
+         text-decoration: none;
+         font-family: Tahoma,Georgia,sans-serif;
+         font-size: 11px;
+         font-weight: bold;
+         cursor: default;
+         white-space: nowrap;
+         position: relative;
+         display:block;
+}
+
+.NavMenu .button:hover {
+         border-color: #cc3366;
+         color: #fff;
+}
+
+.NavMenu .button-active,
+.NavMenu .button-active:hover {
+         border-color: #cc3366;
+         color: #272727;
+}
+
+.NavMenu .item,
+.NavMenu .item:hover,
+.NavMenu .item-active,
+.NavMenu .item-active:hover {
+         background-color: #ffffff;
+         font-family: Tahoma,Georgia,sans-serif;
+         font-size: 11px;
+         line-height: normal;
+         padding: 3px 16px 4px 10px;
+         color: #676767;
+         border: 0px solid transparent;
+         text-decoration: none;
+         font-weight: bold;
+         cursor: default;
+         white-space: nowrap;
+         display:block;
+         position: relative;
+}
+
+.NavMenu .item:hover,
+.NavMenu .item-active,
+.NavMenu .item-active:hover {
+         background-color: #efefef;
+         color: #272727;
+         border: 0px solid #990033;
+}
+
+.NavMenu .section {
+         background-color: #ffffff;
+         border: 1px solid #cc9999;
+         position: absolute;
+         visibility: hidden;
+         z-index: -1;
+}
+
+.NavMenu .arrow {position: absolute;top: 7px;right: 8px;border: 0;}
+
+.NavMenu hr{
+         background-color: #990033;
+         height: 1px;
+         width: 90%;
+         border: 0px none;
+         color: #fff;
+
+}
+
+* html .NavMenu td { position: relative;} /* ie 5.0 fix */

@@ -1,0 +1,15 @@
+/*
+   CSS for Simple-Xoops V 0.8 Gecko
+        theme name:        sd-013-mylovelytheme
+   additional Admin Styles
+        Version 0.1
+
+        this import only addidional css files and Gecko-specific additions/changes (mozilla)
+*/
+
+@import url(core.css);
+@import url(column.css);
+@import url(menu.css);
+@import url(admin.css);
+
+/* Start Gecko-specific additions/changes from here (if any) */

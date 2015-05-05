@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="Sinnedesign" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<{$xoops_module_header}>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+<script type="text/javascript" src="<{$xoops_imageurl}>js/adminmenu.js"></script>
+<script type="text/javascript" src="<{$xoops_imageurl}>js/ie5.js"></script>
+<script type="text/javascript">
+  function toggle(notifs_form) {
+    obj=document.getElementById(notifs_form);
+    obj.style.display=!(obj.style.display=="block")? "block" : "none";
+  }
+  function swapimage(swap){
+    img_plus="<{$xoops_imageurl}>images/plus.png";
+    img_minus="<{$xoops_imageurl}>images/minus.png";
+    obj=document.getElementById(swap);
+    obj.src=!(obj.src==img_minus)? img_minus : img_plus;
+  }
+</script>
+  <div class="wrapper">
+    <table class="toptable" cellspacing="0" summary="headertable">
+      <tr>
+        <td id="headerlogo"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>images/logo.png" width="418" height="190" title="<{$smarty.const._YOURHOME}>" alt="<{$smarty.const._YOURHOME}>" /></a></td>
+        <td id="headerbanner"><{$xoops_banner}></td>
+      </tr>
+      <tr>
+        <td id="headerbar" colspan="2">
+          <{include file="$xoops_theme/navigation/theme_usernav.html"}>
+        </td>
+      </tr>
+    </table>
+   <!--ie 6.0 fix -->
+   <div style="overflow: hidden; width: 1000px; margin: 0px auto;">
+      <div style="float: left; background: url('<{$xoops_imageurl}>images/content-l.png') no-repeat top left; line-height: 10px; width: 10px;">&nbsp;</div>
+      <div style="float: right; background: url('<{$xoops_imageurl}>images/content-r.png') top right no-repeat; line-height: 10px; width: 10px;">&nbsp;</div>
+      <div style="background: url('<{$xoops_imageurl}>images/content-m.png') repeat-x top center; margin: 0px 10px 0 10px; width: 980px; line-height: 10px;">&nbsp;</div>
+   </div>
+
+    <table class="maintable" cellspacing="0" summary="maintable">
+      <tr>
+        <!-- linker block start-->
+        <{if $xoops_showlblock == 1 && $xoops_lblocks!=''}>
+          <td id="leftcolumn">
+            <!-- Start links Block-->
+            <{foreach item=block from=$xoops_lblocks}>
+              <{include file="$xoops_theme/blocks/theme_blockleft.html"}>
+            <{/foreach}>
+            <!-- Ende links Block -->
+          </td>
+        <{/if}>
+       <!-- linker block ende -->
+          <td id="centercolumn">
+            <!--Start Top Center Block-->
+            <{if $xoops_showcblock == 1}>
+            <table cellspacing="0" summary="topcenterblocks">
+                           <tr>
+                <td id="centerLcolumn">
+                  <!--Start top center-left block-->
+                  <{foreach item=block from=$xoops_clblocks}>
+                     <{include file="$xoops_theme/blocks/theme_blockcenter_t_l.html"}>
+                  <{/foreach}>
+                  <!--Ende top center-left block-->
+                </td>
+                <td id="centerRcolumn">
+                  <!--Start top center-right block-->
+                  <{foreach item=block from=$xoops_crblocks}>
+                    <{include file="$xoops_theme/blocks/theme_blockcenter_t_r.html"}>
+                  <{/foreach}>
+                  <!--Ende top center-right block-->
+                </td>
+              </tr>
+              <tr>
+                <td id="centerCcolumn" colspan="2">
+                  <!--Start top middle-center block-->
+                  <{foreach item=block from=$xoops_ccblocks}>
+                    <{include file="$xoops_theme/blocks/theme_blockcenter_t_c.html"}>
+                  <{/foreach}>
+                  <!--End top middle-center block-->
+                </td>
+              </tr>
+            </table>
+            <{/if}>
+            <!--Ende Top Center Block-->
+          <div id="content">
+            <{$xoops_contents}>
+          </div>
+          <!--Start Bottom-center Block-->
+          <{if $xoops_cblblocks or $xoops_cbrblocks or $xoops_cbblocks}>
+          <table cellspacing="0" summary="bottomcenterblocks">
+            <{if $xoops_cbblocks}>
+            <!--Start bottom center-middle block-->
+            <tr>
+              <td id="bottomCcolumn" colspan="2">
+                <{foreach item=block from=$xoops_cbblocks}>
+                  <{include file="$xoops_theme/blocks/theme_blockcenter_b_c.html"}>
+                <{/foreach}>
+              </td>
+            </tr>
+            <!--Ende bottom center-middle block-->
+            <{/if}>
+            <{if $xoops_cblblocks or $xoops_cbrblocks}>
+            <tr>
+              <!--Start bottom center-left block-->
+              <td id="bottomLcolumn">
+                <{foreach item=block from=$xoops_cblblocks}>
+                  <{include file="$xoops_theme/blocks/theme_blockcenter_b_l.html"}>
+                <{/foreach}>
+              <!--Ende bottom center-left block-->
+              </td>
+              <td id="bottomRcolumn">
+                <!--Start bottom center-right block-->
+                <{foreach from=$xoops_cbrblocks item=block}>
+                  <{include file="$xoops_theme/blocks/theme_blockcenter_b_r.html"}>
+                <{/foreach}>
+                <!--Ende bottom center-right block-->
+              </td>
+            </tr>
+            <{/if}>
+          </table>
+          <{/if}>
+          <!--Ende Bottom-center Block-->
+        </td>
+        <!--Rechter Block startet-->
+        <{if $xoops_showrblock == 1 && $xoops_rblocks!=''}>
+        <td id="rightcolumn">
+          <!--Start rechter Block-->
+          <{foreach item=block from=$xoops_rblocks}>
+            <{include file="$xoops_theme/blocks/theme_blockright.html"}>
+          <{/foreach}>
+          <!--Ende rechter Block-->
+        </td>
+        <{/if}>
+        <!--Rechter Block endet-->
+     </tr>
+  </table>
+<div style="overflow: hidden; width: 1000px; margin: 0px auto;">
+      <div style="float: left; background: url('<{$xoops_imageurl}>images/content-liu.png') no-repeat top left; line-height: 10px; width: 10px;">&nbsp;</div>
+      <div style="float: right; background: url('<{$xoops_imageurl}>images/content-reu.png') top right no-repeat; line-height: 10px; width: 10px;">&nbsp;</div>
+      <div style="background: url('<{$xoops_imageurl}>images/content-miu.png') repeat-x top center; margin: 0 10px 5px 10px; width: 980px; line-height: 10px;">&nbsp;</div>
+</div>
+<!--Start footer-->
+  <table class="footertable" cellspacing="0" summary="footertable">
+    <tr>
+      <td id="footerbar">
+        <{$xoops_footer}> powerd by <a href="http://www.webmystar.de/blog/index.php?storytopic=14" accesskey="r" title="firefox themes">Firefox Themes</a>
+      </td>
+    </tr>
+  </table>
+<!-- Start Footer -->
+  </div>
+
+<!-- USER NAVIGATION BAR STARTet -->
+  <script type="text/javascript">
+    var menu1 = new AdMenu("menu1");
+    menu1.position.level1.top = 1;
+    menu1.position.level1.left = 0;
+    menu1.position.levelX.top = 0;
+    menu1.position.levelX.left = 0;
+    menu1.init();
+  </script>
+<!-- USER NAVIGATION BAR ENDet -->
+
+</body>
+</html>

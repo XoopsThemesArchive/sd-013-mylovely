@@ -1,0 +1,12 @@
+/*
+   CSS for Simple-Xoops V 0.8
+        theme name:        sd-013-mylovelytheme
+        Version 0.1
+
+        this import only addidional css files for standart browser
+*/
+
+@import url(core.css);
+@import url(column.css);
+@import url(menu.css);
+@import url(news.css);
